@@ -11,6 +11,10 @@ for n in set_ip:
     d[n] = [k for k in ip.keys() if ip[k] == n]
 print(d)
 
+#need to convert the value datatype to tuple
+#for swapping
+#d = {value:key for key, value in d.items()}
+
 O/P:
 
 {1: ['a', 'b', 'c'], 2: ['d']}
