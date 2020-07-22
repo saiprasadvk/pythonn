@@ -2,12 +2,20 @@
 
 
 Ans:
-
+sol1:
+    
 I = "Python"
 
 for x in range(len(I)):
     a = I[x]
     print('{}-{}'.format(a,x))
+    
+sol2:
+    
+list_enumerate = list(enumerate(I))
+
+for i in list_enumerate:
+        print(i)
     
 O/P:
 
