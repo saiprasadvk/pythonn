@@ -22,6 +22,21 @@ temp = set(I)
 temp.remove(max(temp))
 print(max(temp)) 
 
+sol3:
+  
+I = [20,10,23,50,600,300]
+
+first = second = I[0]
+
+for j in range(1, len(I)):
+    if(I[j] > first):
+        second = first
+        first = I[j]
+    elif(I[j] > second and I[j] < first):
+        second = I[j]
+        
+print("The 2nd big number is : ", second)  
+
 O/p::
 
 300
