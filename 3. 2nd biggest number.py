@@ -3,9 +3,9 @@
   - Dont use inbuild functionality 
   - can use any looping functionality i/o - [20,10,23,50,600,300] o/p - 300
   
-  Ans::
-  
-  
+Ans::
+Sol1:    
+    
 I = [20,10,23,50,600,300]
 
 for i in range(len(I)):
@@ -14,6 +14,13 @@ for i in range(len(I)):
             I[i], I[j] = I[j], I[i]
 
 print(I[1])
+
+Sol2:
+  
+I = [20,10,23,50,600,300]
+temp = set(I) 
+temp.remove(max(temp))
+print(max(temp)) 
 
 O/p::
 
