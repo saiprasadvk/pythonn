@@ -5,15 +5,19 @@
       
 Ans::
 
-List = [1,2,3,4,5,5,6,10,20,40]
+L = [1,2,3,4,5,5,6,10,20,40]
 
 Start = int(input("Enter the start value:"))
 End = int(input("Enter the end value:"))
 
-print(List[Start:End])
+s = L.index(Start)
+e = L.index(End) + 1
+
+L[s:e]
 
 O/p:
 
 Enter the start value:5
 Enter the end value:20
-[5, 6, 10, 20, 40]
+      
+[5, 5, 6, 10, 20]
