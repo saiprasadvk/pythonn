@@ -17,14 +17,30 @@ for x in Str:
     Dict[x] = Str.count(x)    #can use this to find the count "from collections import Counter"  
 
 for m,n in Dict.items():
-    if n % 2 == 0:
+    if n  == 1:
         a = a + m
-    elif n % 2 == 1:
+    elif n > 1:
         b = b + m
         
-print(a)
-print(b)
+print("single",a)
+print("multi",b)
 
+Sol 2:: 
+        
+a = ''
+b = ''
+
+for x in Str:
+    if Str.count(x) == 1:
+        a = a + x
+    elif Str.count(x) > 1:
+        if x not in b:
+            b = b + x
+
+print("single",a)
+print("multi",b)
+                      
+   
 O/P:
 
 paizwlc
