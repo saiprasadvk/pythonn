@@ -7,6 +7,18 @@ x = {'a':{'b':{'c':{'d':1}}}}
 print(x["a"]["b"]["c"])
 print(x["a"]["b"]["c"]["d"])
 
+
+D1 = {'a':{'b':{'c':{'d':1}}}}
+
+def iterdict(d,key):
+    if key in d:
+        return d[key]
+    else:
+        for k,v in d.items():
+            return iterdict(d[k],key)
+            
+iterdict(D1,'b')
+
 O/P:
 
 {'d': 1}
