@@ -1,20 +1,26 @@
 class Node:
-    def __init__(self,data = None):
+    def __init__(self,data=None):
         self.data = data
         self.next = None
-        
+
 class linkedlist:
     def __init__(self):
         self.head = None
-        
+     
     def add(self,newval):
         newdata = Node(newval)
         newdata.next = self.head
-        self.head = newdata    
-     
+        self.head = newdata
+        
     def Delete(self,rmdata):
         
         headval = self.head
+        
+        if headval is not None:
+            if (headval.data == rmdata):
+                self.head = headval.next
+                headval = None
+                return
         
         while headval is not None:
             print("hello",headval.data)
@@ -22,15 +28,14 @@ class linkedlist:
                 break
             prev = headval
             headval = headval.next
-            
-        if (headval == None):
-            print("given remove data is not there")
-            return
         
+        if (headval == None):
+            print("Values is not present")
+            return
+         
         prev.next = headval.next
         
         headval = None
-    
         
     def Insert(self,newdata):
         New = Node(newdata)
@@ -42,19 +47,19 @@ class linkedlist:
         while val:
             print(val.data)
             val = val.next
-        
 
-p = linkedlist()
+
+m = linkedlist()
 n = [2,3,4,5]
 
 for i in n:
-    p.add(i)
-    
-p.Insert('r')
+    m.add(i)
 
-p.Delete(5)
+m.Insert(7)
 
-p.link()
+m.Delete(5)
+
+m.link()
     
 O/P::
 hello r
