@@ -1,0 +1,15 @@
+Input string : 'hello .py'
+Expected Output : '.py hello'
+
+Ans::
+class py_solution:
+    def reverse_words(self, s):
+        return ' '.join(reversed(s.split()))
+
+obj = py_solution()
+print(obj.reverse_words(I))
+
+O/P::
+
+.py hello 
+
