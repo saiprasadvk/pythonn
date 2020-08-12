@@ -21,9 +21,13 @@ class symbol:
         else:
             return "Invalid"
     
-x = "({[]}"    
-obj = symbol()
-print(obj.symbolcheck(x))
+def main():
+    x = "({[]}"    
+    obj = symbol()
+    print(obj.symbolcheck(x))
+    
+if __name__ == '__main__':
+    main()
 
 O/P:
 
