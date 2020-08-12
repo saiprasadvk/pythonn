@@ -1,0 +1,30 @@
+class symbol:
+    def symbolcheck(self,s):
+        O = ['(','{',"["]
+        C = [')',"}","]"]
+        check = []
+    
+        for i in s:
+            if i in O:
+                check.append(i)
+            elif i in C:
+                c = C.index(i)
+                #print(c)
+                if (len(check) > 0 and (O[c] == check[len(check)-1])):
+                    check.pop()
+            else:
+                return "Invalid"        
+                    
+     
+        if len(check) == 0:
+            return "Given string is valid"
+        else:
+            return "Invalid"
+    
+x = "({[]}"    
+obj = symbol()
+print(obj.symbolcheck(x))
+
+O/P:
+
+Invalid
