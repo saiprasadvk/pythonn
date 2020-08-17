@@ -1,0 +1,15 @@
+ Write a Python program to find the most common elements and their counts of a specified text.
+ 
+Ans::
+
+from collections import Counter
+s = 'lkseropewdssafsdfafkpwe'
+print("Original string: "+s)
+print("Most common three characters of the said string:")
+print(Counter(s).most_common(3))
+
+O/P::
+
+Original string: lkseropewdssafsdfafkpwe
+Most common three characters of the said string:
+[('s', 4), ('e', 3), ('f', 3)
