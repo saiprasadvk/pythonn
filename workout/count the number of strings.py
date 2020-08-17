@@ -3,6 +3,7 @@ Sample List : ['abc', 'xyz', 'aba', '1221']
 Expected Result : 2
 
 Ans::
+Sol1:: 
 
 L = ['abc', 'xyz', 'aba', '1221','323']
 count = []
@@ -11,6 +12,14 @@ for i in L:
         if i[0] == i[-1]:
             count.append(i)
 len(set(count)) 
+
+Sol2:: 
+        
+count = 0
+for j in L:
+    if j[0] == j[-1]:
+        count += 1
+count 
 
 O/P:
 
